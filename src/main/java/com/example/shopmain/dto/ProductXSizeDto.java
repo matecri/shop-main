@@ -1,4 +1,4 @@
 package com.example.shopmain.dto;
 
-public class mensaje {
+public class ProductXSizeDto {
 }
