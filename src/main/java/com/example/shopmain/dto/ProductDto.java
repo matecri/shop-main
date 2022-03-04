@@ -3,8 +3,6 @@ package com.example.shopmain.dto;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 public class ProductDto {
-
-
     private String img;
     private String titulo;
     private String descrip;

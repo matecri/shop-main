@@ -13,8 +13,6 @@ public class ProductXSize {
     @Column(nullable = false)
     private long total_amount;
 
-
-
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "product_idproduct")
     private Product product;

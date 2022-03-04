@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class SizeService implements  ISizeService{
+public class SizeService{
     @Autowired
     SizeRepository sizeRepository;
     public boolean existbyname(String name){

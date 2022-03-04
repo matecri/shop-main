@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 @Service
-public class TypeService implements ITypeService{
+public class TypeService {
     @Autowired
     TypeRepository typeRepository;
     public List<Type> list(){

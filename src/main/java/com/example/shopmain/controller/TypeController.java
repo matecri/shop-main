@@ -3,7 +3,7 @@ package com.example.shopmain.controller;
 import com.example.shopmain.dto.Mensaje;
 import com.example.shopmain.dto.TypeDto;
 import com.example.shopmain.entity.Type;
-import com.example.shopmain.service.ITypeService;
+import com.example.shopmain.service.TypeService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,8 +18,8 @@ import java.util.List;
 @CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
 public class TypeController {
     @Autowired
-    ITypeService iTypeService;
-    @GetMapping
+    TypeService iTypeService;
+    @GetMapping("/list")
     public ResponseEntity<List<Type>> list(){
         List<Type> list = iTypeService.list();
         return new ResponseEntity(list, HttpStatus.OK);

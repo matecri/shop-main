@@ -3,7 +3,7 @@ package com.example.shopmain.controller;
 import com.example.shopmain.dto.Mensaje;
 import com.example.shopmain.dto.SizeDto;
 import com.example.shopmain.entity.Size;
-import com.example.shopmain.service.ISizeService;
+import com.example.shopmain.service.SizeService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,8 +18,8 @@ import java.util.List;
 @CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
 public class SizeController {
     @Autowired
-    ISizeService iSizeService;
-    @GetMapping
+    SizeService iSizeService;
+    @GetMapping("/list")
     public ResponseEntity<List<Size>> list(){
         List<Size> list = iSizeService.list();
         return new ResponseEntity(list, HttpStatus.OK);

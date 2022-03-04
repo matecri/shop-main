@@ -1,5 +1,6 @@
 package com.example.shopmain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,10 +32,10 @@ public class Product {
     private Double price;
     @Column(nullable = false)
     private boolean mostrar;
-
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "type_idtype")
     private Type type;
+    private Long pviews;
 
     public Product() {
     }
@@ -48,6 +49,14 @@ public class Product {
         this.price = price;
         this.mostrar = mostrar;
         this.type = type;
+    }
+
+    public Long getPviews() {
+        return pviews;
+    }
+
+    public void setPviews(Long pviews) {
+        this.pviews = pviews;
     }
 
     public Long getIdProduct() {

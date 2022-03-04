@@ -1,15 +1,40 @@
 package com.example.shopmain.criteria;
 
 import io.github.jhipster.service.filter.BooleanFilter;
-import io.github.jhipster.service.filter.DoubleFilter;
 import io.github.jhipster.service.filter.StringFilter;
 
+import java.security.PrivateKey;
+
 public class ProductCriteria {
+    private StringFilter type;
+    private StringFilter titulo;
     private StringFilter brand;
     private StringFilter color;
-    private StringFilter decrip;
-    private BooleanFilter show;
-    private DoubleFilter price;
+    private BooleanFilter mostar;
+
+    public BooleanFilter getMostar() {
+        return mostar;
+    }
+
+    public void setMostar(BooleanFilter mostar) {
+        this.mostar = mostar;
+    }
+
+    public StringFilter getType() {
+        return type;
+    }
+
+    public void setType(StringFilter type) {
+        this.type = type;
+    }
+
+    public StringFilter getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(StringFilter titulo) {
+        this.titulo = titulo;
+    }
 
     public StringFilter getBrand() {
         return brand;
@@ -25,29 +50,5 @@ public class ProductCriteria {
 
     public void setColor(StringFilter color) {
         this.color = color;
-    }
-
-    public StringFilter getDecrip() {
-        return decrip;
-    }
-
-    public void setDecrip(StringFilter decrip) {
-        this.decrip = decrip;
-    }
-
-    public BooleanFilter getShow() {
-        return show;
-    }
-
-    public void setShow(BooleanFilter show) {
-        this.show = show;
-    }
-
-    public DoubleFilter getPrice() {
-        return price;
-    }
-
-    public void setPrice(DoubleFilter price) {
-        this.price = price;
     }
 }

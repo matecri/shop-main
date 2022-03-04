@@ -38,7 +38,17 @@ public class MainSecurity extends WebSecurityConfigurerAdapter  {
             // -- Swagger UI v3 (OpenAPI)
             "/v3/api-docs/**",
             "/swagger-ui/**",
-            "/auth/**"
+            // -- Auth
+            "/auth/**",
+            // -- Product
+            "/product/list",
+            "/product/popular",
+            "/product/detail/**",
+            "/type/list",
+            // -- ProductxSize
+            "/ProductXSIze/list/**",
+            // -- Size
+            "/size/list/**"
     };
     // other public endpoints of your API may be appended to this array
     @Bean
